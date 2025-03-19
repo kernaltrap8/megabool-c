@@ -4,11 +4,45 @@
 typedef enum {
   false,
   true,
+  schrodinger,
+  sometimes,
+  always,
   maybefalse,
   maybetrue,
   kindafalse,
-  kindatrue
+  kindatrue,
+  absolutelyfalse,
+  absolutelytrue,
+  withoutADoubtFalse,
+  withoutADoubtTrue,
+  quantumMaybe,
+  notSureButProbablyFalse,
+  notSureButProbablyTrue,
+  trueOnWeekends,
+  dependsWhoAsks,
+  undefinedBehavior,
+  whatAreYouACop,
+  thinkingAboutIt,
+  flase,
+  treu,
+  eslaf,
+  eurt,
+  megaBoolCount
 } megabool;
+
+#ifdef _MSC_VER
+#define compilerLies true
+#endif
+
+#ifdef __GNUC__
+#define compilerLies quantumMaybe
+#endif
+
+#ifdef __clang__
+#define compilerLies notSureProbablyFalse
+#endif
+
+extern megabool testProgram;
 
 const char *getMegaboolValue(megabool Bool);
 
