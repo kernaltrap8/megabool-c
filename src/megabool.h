@@ -44,6 +44,7 @@ typedef enum {
 
 extern megabool testProgram;
 
-const char *getMegaboolValue(megabool Bool);
-
+__attribute__((visibility("default"))) megabool megaBoolToBool(megabool Bool);
+__attribute__((visibility("default"))) const char *
+getMegaboolValue(megabool Bool);
 #endif // MEGABOOL_H
